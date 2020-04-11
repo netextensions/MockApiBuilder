@@ -1,8 +1,11 @@
 ﻿using System.Reflection;
 using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace NetExtensions
 {
@@ -30,5 +33,18 @@ namespace NetExtensions
             return services.AddMockApi<TContext, TAutoMapperMediatR, TAutoMapperMediatR>(connectionString, swaggerTitle, swaggerDescription, swaggerVersion);
         }
 
+        public static IApplicationBuilder UseMockApi(this IApplicationBuilder app, IWebHostEnvironment env, string swaggerName = null,
+            string swaggerEndpoint = null, bool useSerilogMiddleware = true)
+        {
+            app.AddSwashbuckle(swaggerName, swaggerEndpoint);
+            app.AddSerilogRequestLogging(useSerilogMiddleware);
+            if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
+
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+
+            return app;
+        }
     }
 }
