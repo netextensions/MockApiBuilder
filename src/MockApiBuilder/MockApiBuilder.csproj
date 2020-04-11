@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>NetExtensions</RootNamespace>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>NetExtensions MockApiBuilder</Title>
+    <Description>MockApiBuilder</Description>
+    <PackageProjectUrl>https://github.com/netextensions/MockApiBuilder</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/netextensions/MockApiBuilder</RepositoryUrl>
+    <PackageTags>MockApiBuilder, mock api,.net core</PackageTags>
+    <PackageId>NetExtensions.MockApiBuilder</PackageId>
+    <PackageVersion>1.0.1</PackageVersion>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Authors>netextensions.io</Authors>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="icon.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="NetExtensions.Extensions.SqlServer" Version="1.0.0" />
+    <PackageReference Include="LanguageExt.Core" Version="3.4.13" /> 
+    <PackageReference Include="NetExtensions.ServiceHostBuilder" Version="1.0.0" /> 
+    <PackageReference Include="NetExtensions.Extensions.SwashbuckleWithOauth" Version="1.0.0" />
+    <PackageReference Include="NetExtensions.Extensions.SerilogApplicationBuilder" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
