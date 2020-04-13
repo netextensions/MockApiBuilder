@@ -15,7 +15,7 @@ namespace NetExtensions
              string swaggerTitle = null,
             string swaggerDescription = null,
             string swaggerVersion = null)
-            where TContext : DbContext, new()
+            where TContext : DbContext 
         {
             services.AddSwashbuckle(swaggerTitle, swaggerDescription, swaggerVersion);
             services.AddControllers().AddNewtonsoftJson();
@@ -28,7 +28,7 @@ namespace NetExtensions
             string swaggerTitle = null,
             string swaggerDescription = null,
             string swaggerVersion = null)
-            where TContext : DbContext, new()
+            where TContext : DbContext
         {
             return services.AddMockApi<TContext, TAutoMapperMediatR, TAutoMapperMediatR>(connectionString, swaggerTitle, swaggerDescription, swaggerVersion);
         }
