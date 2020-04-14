@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/netextensions/MockApiBuilder</RepositoryUrl>
     <PackageTags>MockApiBuilder, mock api,.net core</PackageTags>
     <PackageId>NetExtensions.MockApiBuilder</PackageId>
-    <PackageVersion>1.0.4</PackageVersion>
+    <PackageVersion>1.0.5</PackageVersion>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Authors>netextensions.io</Authors>
     <PackageIcon>icon.png</PackageIcon>
@@ -30,7 +30,7 @@
     <PackageReference Include="NetExtensions.ServiceHostBuilder" Version="1.0.0" /> 
     <PackageReference Include="NetExtensions.Extensions.SwashbuckleWithOauth" Version="1.0.0" />
     <PackageReference Include="NetExtensions.Extensions.SerilogApplicationBuilder" Version="1.0.0" />
-    <PackageReference Include="NetExtensions.Core.Handlers" Version="1.0.1" />
+    <PackageReference Include="NetExtensions.Core.Handlers" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
